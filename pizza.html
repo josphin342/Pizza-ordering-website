@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pizza Corner</title>
+    <style>
+        body {
+            background: linear-gradient(to bottom, #ffefd5, #ffdab9);
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1em;
+        }
+
+        .header {
+            background: linear-gradient(to right, rgba(255, 69, 0, 0.8), rgba(255, 140, 0, 0.8)), url('header3.jpeg');
+            background-size: cover;
+            background-blend-mode: overlay;
+            color: white;
+            text-align: center;
+            padding: 2em;
+        }
+
+        .header h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .header .tagline {
+            font-size: 1.2em;
+            font-style: italic;
+            margin: 0.5em 0;
+        }
+
+        .header .btn {
+            background: #ff4500;
+            padding: 0.8em 1.5em;
+            font-size: 1em;
+            border: none;
+            border-radius: 20px;
+            color: white;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .header .btn:hover {
+            background: #ff6347;
+        }
+
+        .pizza-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5em;
+            padding: 2em;
+            text-align: center;
+        }
+
+        .pizza {
+            background: white;
+            border-radius: 10px;
+            padding: 1em;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .pizza:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .pizza .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #ff4500;
+            color: white;
+            padding: 0.3em 0.6em;
+            font-size: 0.8em;
+            border-radius: 5px;
+            text-transform: uppercase;
+        }
+
+        .pizza-img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 1em;
+        }
+
+        .pizza h3 {
+            font-size: 1.5em;
+            margin: 0.5em 0;
+        }
+
+        .price {
+            font-size: 1.2em;
+            color: #555;
+            margin: 0.5em 0;
+        }
+
+        .btn {
+            background: #13a010;
+            color: white;
+            border: none;
+            padding: 0.7em 1.5em;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #0f8b08;
+        }
+
+        .footer {
+            text-align: center;
+            margin: 2em 0;
+            font-size: 0.9em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1>Pizza Corner</h1>
+            <p class="tagline">Have a Delicious Bite!</p>
+            <a href="piz.html"><button id="view-cart-btn" class="btn">View Cart</button></a>
+        </div>
+    </header>
+    <main>
+        <section class="pizza-list container">
+            <div class="pizza" data-name="Veg Pizza" data-price="25">
+                <span class="badge">Best Seller</span>
+                <img src="bg1.jpg" alt="Delicious Veg Pizza" class="pizza-img">
+                <h3>Veg Pizza</h3>
+                <p class="price">$25</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            <div class="pizza" data-name="Cheese Pizza" data-price="30">
+                <img src="bg2.jpg" alt="Cheesy Cheese Pizza" class="pizza-img">
+                <h3>Cheese Pizza</h3>
+                <p class="price">$30</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            <div class="pizza" data-name="Chicken Pizza" data-price="35">
+                <span class="badge">New</span>
+                <img src="bg3.jpg" alt="Spicy Chicken Pizza" class="pizza-img">
+                <h3>Chicken Pizza</h3>
+                <p class="price">$35</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            <div class="pizza" data-name="Tandoori Chicken Pizza" data-price="40">
+                <img src="bg4.jpg" alt="Tandoori Chicken Pizza" class="pizza-img">
+                <h3>Tandoori Chicken Pizza</h3>
+                <p class="price">$40</p>
+                <button class="btn add-to-cart">Add to Cart</button>
+            </div>
+            
+        </section>
+    </main>
+    <footer class="footer">
+        <p>© 2025 Pizza Corner. All Rights Reserved.</p>
+    </footer>
+    <script src="Script.js"></script>
+</body>
+</html>
